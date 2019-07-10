@@ -11,9 +11,9 @@ import newsync
 from collections import Counter
 from nose.tools import eq_, ok_
 
-ids = [21211 ,21212 ,21213 ,21214 ,21215 ,21216 ,21217 ,21218 ,20054 ,20057 ,20058 ,20063 ,20065 ,20066 ,20067 ]
+ids = [91911 ,91919 ,91913 ,91914 ,91915 ,91916 ,91917 ,91918 ,90054 ,90057 ,90058 ,90063 ,90065 ,90066 ,90067 ]
 ids_strs = map(str, ids)
-samps =  ['00147BLA001xQ' , '00150BLA001xQ' , '00537BLA001xQ' , '00006BLA004xQ' , '00043BLA001xQ' , '00170BLA006xQ' , '00241BLA001xQ' , '00813BLA008xQ' , '00034BLA003' , '00165BLA002' , '00192BLA001' , '00542BLA001' , '00622BLA001' , '00623BLA001' , '00702BLA00']
+samps =  ['ff14abcBLAff1xQ' , 'ff15fBLAff1xQ' , 'ff53abcBLAff1xQ' , 'ffff6BLAff4xQ' , 'fff43BLAff1xQ' , 'ff1abcfBLAff6xQ' , 'ff241BLAff1xQ' , 'ff813BLAff8xQ' , 'fff34BLAff3' , 'ff165BLAff2' , 'ff192BLAff1' , 'ff542BLAff1' , 'ff622BLAff1' , 'ff623BLAff1' , 'ffabcf2BLAff']
 
 samp_ids = dict(zip(ids, samps))
 mock_id_lst = 'IssueID,SampleName\n' + '\n'.join(map(','.join, zip(ids_strs, samps)))
