@@ -1,5 +1,7 @@
-import sh
+sh
 path.py
-import os
+
+# testing
 pyfakefs
 mock 
+nose
