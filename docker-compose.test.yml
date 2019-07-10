@@ -1,0 +1,3 @@
+sut:
+  build: .
+  command: nosetests test_newsync.py
