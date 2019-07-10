@@ -1,6 +1,7 @@
 # sh.gunzip( indir / samp[i] ... gz, outidr / ids[i] . w/date n shit)
 from pyfakefs.fake_filesystem_unittest import Patcher
-from unittest.mock import patch
+# python3 i think from unittest.mock import patch
+from mock import patch
 import shutil 
 import sh
 from path import Path 
