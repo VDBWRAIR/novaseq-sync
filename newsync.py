@@ -25,7 +25,7 @@ def newnames_by_dict(indir, rbs, snames, sids):
  # str : int -> [(Path, Path)]
   def get_zipped(samp):
     # path -> [path]
-    return indir.glob(samp + '*') # side-effect :(
+    return indir.glob(samp + '*.gz') # side-effect :(
 
   fastq_groups = map(get_zipped, snames) # [[path]]
 
@@ -57,7 +57,9 @@ def run(indir, rbs, id_lst):
   for old, new in old_and_new:
     print 'gunzip', old
     print 'symlink', old.stripext(), new
-    sh.gunzip(old)
+    if not os.path.exists(old.stripext()):
+        assert os.path.exists(old)
+        sh.gunzip(old)
     os.symlink(old.stripext(), new)
 
 def main(): 
